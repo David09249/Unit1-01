@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Diff</key>
+	<array>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>// Created by: David Wang
+// Created on: 19-Sep-2017
+// Created for: ICS3U
+// Daily Assignment – Unit1-01
+// This program displays school names and their mascot
+
+import PlaygroundSupport
+
+
+import UIKit
+
+class ViewController : UIViewController {
+    
+    var schoolNameLabel : UILabel!
+    var schoolMascotLabel : UILabel!
+    var motherTeresaButton : UIButton!
+    var stJoseButton : UIButton!
+    var stMarkButton : UIButton!
+    
+    override func viewDidLoad() {
+        // UI
+        super.viewDidLoad()
+        
+        let view = UIView()
+        view.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        self.view = view
+        
+        motherTeresaButton = UIButton()
+        motherTeresaButton.setTitle("Mother Teresa HS", for: .normal)
+        motherTeresaButton.setTitleColor(.blue, for: .normal)
+        motherTeresaButton.addTarget(self, action: #selector(showTextMotherTeresa), for: .touchUpInside)
+        view.addSubview(motherTeresaButton)
+        motherTeresaButton.translatesAutoresizingMaskIntoConstraints = false
+        motherTeresaButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 20).isActive = true
+        motherTeresaButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).isActive = true
+        
+        stJoseButton = UIButton()
+        stJoseButton.setTitle("St. Joe HS", for: .normal)
+        stJoseButton.setTitleColor(.blue, for: .normal)
+        stJoseButton.addTarget(self, action: #selector(showTextStJoe), for: .touchUpInside)
+        view.addSubview(stJoseButton)
+        stJoseButton.translatesAutoresizingMaskIntoConstraints = false
+        stJoseButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 20).isActive = true
+        stJoseButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20).isActive = true
+        
+        stMarkButton = UIButton()
+        stMarkButton.setTitle("St. Mark HS", for: .normal)
+        stMarkButton.setTitleColor(.blue, for: .normal)
+        stMarkButton.titleLabel?.textAlignment = .center
+        stMarkButton.addTarget(self, action: #selector(showTextStMark), for: .touchUpInside)
+        view.addSubview(stMarkButton)
+        stMarkButton.translatesAutoresizingMaskIntoConstraints = false
+        stMarkButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 20).isActive = true
+        stMarkButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        
+        schoolNameLabel = UILabel()
+        schoolNameLabel.textAlignment = .center
+        view.addSubview(schoolNameLabel)
+        schoolNameLabel.translatesAutoresizingMaskIntoConstraints = false
+        schoolNameLabel.topAnchor.constraint(equalTo: motherTeresaButton.bottomAnchor, constant: 20).isActive = true
+        schoolNameLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        
+        schoolMascotLabel = UILabel()
+        schoolMascotLabel.textAlignment = .center
+        view.addSubview(schoolMascotLabel)
+        schoolMascotLabel.translatesAutoresizingMaskIntoConstraints = false
+        schoolMascotLabel.topAnchor.constraint(equalTo: schoolNameLabel.bottomAnchor, constant: 20).isActive = true
+        schoolMascotLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+    }
+    
+    func showTextMotherTeresa() {
+        schoolNameLabel.text = "Mother Teresa HS"
+        schoolMascotLabel.text = "Titans"
+    }
+    
+    func showTextStJoe() {
+        schoolNameLabel.text = "St. Joe HS"
+        schoolMascotLabel.text = "Jaguars"
+    }
+    
+    func showTextStMark() {
+        schoolNameLabel.text = "St. Mark HS"
+        schoolMascotLabel.text = "Lions"
+    }
+    
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
+}
+
+PlaygroundPage.current.liveView = ViewController()
+</string>
+			<key>ModifiedRange</key>
+			<string>{145, 3822}</string>
+			<key>OriginalContent</key>
+			<string>show("What is your name?")
+
+let name = ask("Name")
+
+show("Hi " + name)
+
+</string>
+			<key>OriginalRange</key>
+			<string>{145, 72}</string>
+		</dict>
+	</array>
+	<key>File</key>
+	<string>Chapters/Answers.playgroundchapter/Pages/Text.playgroundpage/Contents.swift</string>
+</dict>
+</plist>
